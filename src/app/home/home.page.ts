@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 
@@ -6,9 +5,11 @@ import { IonicModule } from '@ionic/angular';
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonicModule, CommonModule]
+  imports: [ IonicModule ],
+  standalone: true,
 })
-export class HomePage {
+
+export class HomePage implements OnInit {
 
   items = [
     { id: 1, name: 'T-shirt for men', photo: 'assets/imgs/tshirt.jpeg', color: 'Yellow', price: 20, quantity: 1 },
